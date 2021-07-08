@@ -1,50 +1,44 @@
-# SGC_satreps1.0
+# Visualizador_Satreps
 Es una página web creada para visualizar los eventos del proyecto SATREPS. Su desarrollo se hizo en python con los siguientes frameworks: Dash y Flask.
 ## 1. Instalación 
 **(Tenga en cuenta que debe tener la carpeta /mnt/escenarios montada.)**
 
-<!---**SI ESTA EN analistas@10.100.100.11 NO ES NECESARIO HACER LA INSTALACIÓN. Pase a 2. Activación**. -->
-
-<!---## Usando Anaconda 
+Python Versión 3.7 en adelante. (Usaremos como ejemplo python 3.8)
 ```bash
-conda env create -f venv_satreps.yml
-conda activate venv_satreps
-```-->
+sudo apt-get install python3.7 (o 3.8)
+```
+Tener virtualenv en python.
+```bash
+python3.7 -m pip install virtualenv
+```
 
 ### Usando virtualenv
 ```bash
 conda deactivate #En caso de que haya un ambiente de anaconda activo
-pip install virtualenv
-virtualenv .venv
-source .venv/bin/activate
+virtualenv .stp_venv
+source .stp_venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 2. Activación 
-<!---
-## Usando Anaconda
-```bash
-conda activate venv_satreps
-```-->
+# 2. Demo
 
-## Usando virtualenv
-** Dentro del repositorio SGC_satreps1.0 **
-```bash
-conda deactivate #En caso de que haya un ambiente de anaconda activo
-source .venv/bin/activate
-```
+## Servidor escenarios:
 
-# 3. Demo
-Se corre EN DOS PUERTOS del servidor 11 de analistas en el puerto 8050.
+Dentro de la carpeta * /mnt/escenarios *, dígite la siguiente línea:
 
 ~~~bash
 python3 -m http.server 8090 --bind 10.100.100.11
 ~~~
 
+En vez de 10.100.100.11 pone el servidor donde este montada la carpeta.
+
+## Servidor visualización:
+Corra el código run.py
 ~~~bash
-source .venv/bin/activate
+source .stp_venv/bin/activate
 python run.py
 ~~~
+
 WEB:   http://10.100.100.11:8050
 ![index -> http://10.100.100.11:8050](images/stp_index.png)
 
