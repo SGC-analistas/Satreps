@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Escenarios:
 
-Vamos a montar los escenarios en la web. Dentro de la carpeta * /mnt/escenarios/web_page *, dígite la siguiente línea:
+Vamos a montar los escenarios en la web. Dentro de la carpeta */mnt/escenarios/web_page*, dígite la siguiente línea:
 
 ~~~bash
 python3 -m http.server 8090 --bind 10.100.100.11
