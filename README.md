@@ -32,7 +32,7 @@ python3 -m http.server 8090 --bind 10.100.100.11
 En vez de 10.100.100.11 pone el servidor donde este montada la carpeta. Se debe ver del siguiente modo:
 
 
-![index -> http://10.100.100.11:8050](images/escenarios.png)
+![/mnt/escenarios -> http://10.100.100.11:8090](images/escenarios.png)
 
 ## Servidor visualización:
 Corra el código run.py
