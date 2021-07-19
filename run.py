@@ -39,13 +39,13 @@ def read_args():
     parser.add_argument(prefix+"es",prefix*2+"escenario_server",
                         type=str,
                         metavar='',
-                        help="Servidor de la carpeta web_page. ejemplo: 10.100.100.11", 
+                        help="Servidor de escenario (web_page). ejemplo: 10.100.100.11", 
                         required = True)
 
     parser.add_argument(prefix+"ep",prefix*2+"escenario_port",
                         type=int,
                         metavar='',
-                        help="Puerto de la carpeta web_page. ejemplo: 8090", 
+                        help="Puerto del escenario (web_page) . ejemplo: 8090", 
                         required = True)
 
     args = parser.parse_args()
