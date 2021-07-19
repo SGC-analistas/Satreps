@@ -3,13 +3,13 @@ Es una página web creada para visualizar los eventos del proyecto SATREPS. Su d
 ## 1. Instalación 
 **(Tenga en cuenta que debe tener la carpeta /mnt/escenarios montada.)**
 
-Python Versión 3.6 en adelante. (Usaremos como ejemplo python 3.7)
+Python Versión 3.6 
 ```bash
-sudo apt-get install python3.7 (o 3.8)
+sudo apt-get install python3.6 
 ```
 Tener virtualenv en python.
 ```bash
-python3.7 -m pip install virtualenv
+python3.6 -m pip install virtualenv
 ```
 
 ### Usando virtualenv
