@@ -3,7 +3,7 @@ Es una página web creada para visualizar los eventos del proyecto SATREPS. Su d
 ## 1. Instalación 
 **(Tenga en cuenta que debe tener la carpeta /mnt/escenarios montada.)**
 
-Python Versión 3.7 en adelante. (Usaremos como ejemplo python 3.8)
+Python Versión 3.6 en adelante. (Usaremos como ejemplo python 3.7)
 ```bash
 sudo apt-get install python3.7 (o 3.8)
 ```
@@ -29,11 +29,14 @@ Dentro de la carpeta * /mnt/escenarios *, dígite la siguiente línea:
 ~~~bash
 python3 -m http.server 8090 --bind 10.100.100.11
 ~~~
+En vez de 10.100.100.11 pone el servidor donde este montada la carpeta. Se debe ver del siguiente modo:
 
-En vez de 10.100.100.11 pone el servidor donde este montada la carpeta.
+
+![index -> http://10.100.100.11:8050](images/escenarios.png)
 
 ## Servidor visualización:
 Corra el código run.py
+
 ~~~bash
 source .stp_venv/bin/activate
 python run.py
