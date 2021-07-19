@@ -67,23 +67,21 @@ visualizador de eventos del proyecto SATREPS:
 
 Visualización[home]:   http://10.100.100.11:8050/home
 
+![home -> http://10.100.100.11:8050/home](images/home.png)
+
 En la parte izquierda se puede escoger la magnitud y profundidad deseada, luego de ello, el 
 mapa interactivo se actualiza con los sismos que cumplen los anteriores parámetros. 
-
-![home -> http://10.100.100.11:8050/home](images/stp_home.png)
 
 En este punto se debe hacer click en el evento que desea observar la simulación. En la parte inferior
 izquierda se observa un recuadro titulado como **Website**. En dicho recuadro aparece el enlace que va a redirigir a la página de simulación. 
 
 ![home & link -> http://10.100.100.11:8050/home](images/vis.png)
 
-En la anterior figura se hizo click en un sismo ubicado en lat:2.87969, lon:77.76020 con magnitudde M8.5 y profundidad de 50km. Su respectivo enlace se actualizo en el recuadro y corresponde a la siguiente ruta: /mnt/escenarios/21192022202020_2.87969_77.76020_M8.5_50km/html/21192022202020
+En la anterior figura se hizo click en un sismo ubicado en lat:3.75294, lon:-78.54337 con magnitud de M8.5 y profundidad de 10km. Su respectivo enlace se actualizo en el recuadro y corresponde a la siguiente ruta: /mnt/escenarios/web_page/21192022202020_3.75294_78.54337_M8.5_10km/html/21192022202020
 
 Al hacer click en el enlace se observa la siguiente simulación:
 
 ![escenario -> http://10.100.100.11:8050/home/escenario](images/vis_1.png)
-
-**NOTA: No se visualiza la animación mp4 porque se deben actualizar los permisos de ejecución de /mnt/escenarios**
 
 Por último, si se da click en 'source model SWIFT 1' o 'source model SWIFT 2' se pueden ver los modelos generados por swift1 o swift2 respectivamente.
 
