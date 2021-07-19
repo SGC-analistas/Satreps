@@ -22,33 +22,50 @@ pip install -r requirements.txt
 
 # 2. Demo
 
-## Servidor escenarios:
+## Escenarios:
 
-Dentro de la carpeta * /mnt/escenarios *, dígite la siguiente línea:
+Vamos a montar los escenarios en la web. Dentro de la carpeta * /mnt/escenarios/web_page *, dígite la siguiente línea:
 
 ~~~bash
 python3 -m http.server 8090 --bind 10.100.100.11
 ~~~
-En vez de 10.100.100.11 pone el servidor donde este montada la carpeta. Se debe ver del siguiente modo:
 
+donde el servidor es 10.100.100.11 y el puerto es 8090. El escenario se observará en el siguiente link:
 
-![/mnt/escenarios -> http://10.100.100.11:8090](images/escenarios.png)
+Escenario:   http://10.100.100.11:8090
 
-## Servidor visualización:
-Corra el código run.py
+Se debe ver del siguiente modo:
+
+![/mnt/escenarios/web_page -> http://10.100.100.11:8090](images/escenarios.png)
+
+## Visualización:
+Para correr la visualización, se necesita ejecutar el código run.py que tiene los siguientes parámetros obligatorios:
+
+~~~bash
++s   ++server                Servidor de visualización
++p   ++port                  Puerto de visualización
++es  ++escenario_server      Servidor de escenario (web_page)  
++ep  ++escenario_port        Puerto del escenario (web_page)  
+~~~
+
+Teniendo en cuenta el servidor y el puerto donde se montaron los escenarios, vamos a crear la visualización en el servidor 10.100.100.11 pero en el el puerto 8050.
+Para hacerlo, digitemos la siguiente línea:
 
 ~~~bash
 source .stp_venv/bin/activate
-python run.py
+python run.py +s 10.100.100.11 +p 8050 +es 10.100.100.11 +ep 8090
 ~~~
 
-WEB:   http://10.100.100.11:8050
+Luego, en un navegador digite el link de visualización: 
+
+Visualización:   http://10.100.100.11:8050
+
 ![index -> http://10.100.100.11:8050](images/stp_index.png)
 
 Al hacer click en **Go to SATREPS** los redirige al /home correspondiente al 
 visualizador de eventos del proyecto SATREPS: 
 
-WEB:   http://10.100.100.11:8050/home
+Visualización[home]:   http://10.100.100.11:8050/home
 
 En la parte izquierda se puede escoger la magnitud y profundidad deseada, luego de ello, el 
 mapa interactivo se actualiza con los sismos que cumplen los anteriores parámetros. 
@@ -58,24 +75,24 @@ mapa interactivo se actualiza con los sismos que cumplen los anteriores parámet
 En este punto se debe hacer click en el evento que desea observar la simulación. En la parte inferior
 izquierda se observa un recuadro titulado como **Website**. En dicho recuadro aparece el enlace que va a redirigir a la página de simulación. 
 
-![home & link -> http://10.100.100.11:8050/home](images/stp_link.png)
+![home & link -> http://10.100.100.11:8050/home](images/vis.png)
 
 En la anterior figura se hizo click en un sismo ubicado en lat:2.87969, lon:77.76020 con magnitudde M8.5 y profundidad de 50km. Su respectivo enlace se actualizo en el recuadro y corresponde a la siguiente ruta: /mnt/escenarios/21192022202020_2.87969_77.76020_M8.5_50km/html/21192022202020
 
 Al hacer click en el enlace se observa la siguiente simulación:
 
-![escenario -> http://10.100.100.11:8050/home/escenario](images/stp_escenario.png)
+![escenario -> http://10.100.100.11:8050/home/escenario](images/vis_1.png)
 
 **NOTA: No se visualiza la animación mp4 porque se deben actualizar los permisos de ejecución de /mnt/escenarios**
 
 Por último, si se da click en 'source model SWIFT 1' o 'source model SWIFT 2' se pueden ver los modelos generados por swift1 o swift2 respectivamente.
 
-![stp_swift1model -> http://10.100.100.11:8050/home/escenario/21192022202020_src1.html](images/stp_swift1model.png)
-![stp_swift2model -> http://10.100.100.11:8050/home/escenario/21192022202020_src2.html](images/stp_swift2model.png)
+![stp_swift1model -> http://10.100.100.11:8050/home/escenario/21192022202020_src1.html](images/vis_1_1.png)
+![stp_swift2model -> http://10.100.100.11:8050/home/escenario/21192022202020_src2.html](images/vis_1_2.png)
 
 ## 4. Autores
 
 - Emmanuel Castillo ecastillo@sgc.gov.co
 - Angel agudelo adagudelo@sgc.gov.co
 
-24-08-2020
+19-07-2021

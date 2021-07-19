@@ -1,14 +1,10 @@
 import pandas as pd
 import os
-import numpy as np
 import dash                     #(version 1.0.0)
-import dash_table
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import plotly.offline as py     #(version 4.4.1)
 import plotly.graph_objs as go
-import json
 
 CSV_PATH = os.path.join(os.path.dirname(__file__),'csv','datos-satreps.csv')
 
@@ -160,11 +156,13 @@ def display_click_data(clickData):
     if clickData is None:
         return 'Select an event'
     else:
-        
+        server_port = os.path.join(os.path.dirname(__file__),'escenario.txt')
+        server_port = open(server_port,"r").readline()
         the_link = clickData['points'][0]['customdata'].strip()
         html_folder = the_link.split('_')[0]
         html_file = html_folder + "_mts_simulation.html"
-        static_folder = os.path.join('http://10.100.100.11:8090',
+        # static_folder = os.path.join('http://10.100.100.11:8090',
+        static_folder = os.path.join(server_port,
                                     the_link,
                                     'html',
                                     html_folder,html_file )
